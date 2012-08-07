@@ -205,3 +205,18 @@ div.CodeMirror span.CodeMirror-nonmatchingbracket {color: #f22;}
 .objectbrowser li {
 	list-style-type: none;
 }
+
+#SoleMirror {
+	position: fixed;
+	bottom: 0px;
+	top: 40%;
+	left: 0px;
+	right: 0px;
+	border-top: 5px solid black;
+	background-color: rgba(0, 0, 0, 0.8);
+	padding: 0px;
+	margin: 0px;
+	z-index: 20;
+	text-align: left;
+	overflow-y: scroll;
+}
