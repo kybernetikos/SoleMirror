@@ -1,8 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>SoleMirror - A CodeMirror console</title>
+	<script type="text/javascript" src="src/codemirror-compressed.js"></script>
+	<script type="text/javascript" src="src/SoleMirror.js"></script>
+	<link rel="stylesheet" href="style/CodeMirror.css">
+	<link rel="stylesheet" href="style/SoleMirror.css">
+
+	<style type="text/css">
+	body {
+		font-family: sans-serif;
+		font-size: 13pt;
+	}
+	#console {
+		padding: 0px;
+		margin: 0px;
+		font-size: 14pt;
+	}
+	</style>
 </head>
 <body>
-	<p>Hello world</p>
+<h1>SoleMirror</h1>
+<p>The SoleMirror is a CodeMirror Console.</p>
+<ul><li>Use Control-Up and Control-Down to move through the history.</li>
+	<li>Use Control-Enter to execute the code.</li>
+	<li>Use Control-Space to autocomplete</li>
+</ul>
+<p>You can write to the console output using <tt>con.log(thingToLog, otherThingToLog...)</tt>.</p>
+
+<div id='console'></div>
+
+<script type="text/javascript">
+	var init = window.location.search.substring(1);
+	var con = new SoleMirror(document.getElementById('console'), unescape(init));
+</script>
+
 </body>
 </html>
